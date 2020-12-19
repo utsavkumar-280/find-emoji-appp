@@ -156,7 +156,9 @@ export default function App() {
           className="search"
           onChange={changeHandler}
           value={emoji}
-          placeholder={"Search your emoji"}
+          placeholder={
+            "search your emoji  (or copy + paste emoji to find its meaning) "
+          }
           style={{
             padding: "1em",
             minWidth: "80%"
