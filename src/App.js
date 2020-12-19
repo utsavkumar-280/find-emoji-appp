@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-/**
- * concept notes: styling in react
- */
-
-/**
- * concept of hashmap (object as hashmap)
- * O(1) and why we are doing this.
- */
 const emojiDictionary = {
   "🙉": " Hear-No-Evil-Monkey",
   "🙊": " Speak-No-Evil-Monkey",
@@ -128,18 +120,12 @@ const emojiDictionary = {
   "🦑": "Squid",
   "🐭": "Mouse Face",
   "🐁": "Mouse"
-
-  /** add some more to show how the app now expands when there's new data */
 };
 
-/**
- * Bonus feature
- * converting an object to array of keys
- */
 const emojis = Object.keys(emojiDictionary);
 
 export default function App() {
-  const [emoji, setEmoji] = useState(""); /** concept 2 is useState */
+  const [emoji, setEmoji] = useState("");
   const [meaning, setMeaning] = useState("translation will appear here..");
 
   function changeHandler(event) {
@@ -158,7 +144,6 @@ export default function App() {
   }
 
   return (
-    /** concept 3 is onchange */
     <div className="App">
       <header id="logo">
         <h1>Find your Emoji</h1>
@@ -176,8 +161,8 @@ export default function App() {
             minWidth: "80%"
           }}
         />
-        <h2> {emoji} </h2> {/** Concept 1: JSX */}
-        <h3> {meaning} </h3> {/** how much part is re-rendered. */}
+        <h2> {emoji} </h2>
+        <h3> {meaning} </h3>
         <div id="icon">Emojis for animals and nature.</div>
         <div id="list">
           {emojis.map((emoji) => (
