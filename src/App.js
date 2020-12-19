@@ -166,7 +166,7 @@ export default function App() {
         />
         <h2> {emoji} </h2>
         <h3> {meaning} </h3>
-        <div id="icon">Emojis for animals and nature.</div>
+        <div id="icon">.Click on the emoji to find out its meaning.</div>
         <div id="list">
           {emojis.map((emoji) => (
             <span
