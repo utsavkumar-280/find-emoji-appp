@@ -141,6 +141,7 @@ export default function App() {
 
   function emojiClickHandler(inputEmoji) {
     setMeaning(emojiDictionary[inputEmoji]);
+    setEmoji(inputEmoji);
   }
 
   return (
@@ -167,6 +168,7 @@ export default function App() {
         <div id="list">
           {emojis.map((emoji) => (
             <span
+              key={emoji}
               onClick={() => emojiClickHandler(emoji)}
               style={{ fontSize: "4rem", padding: "1rem", cursor: "pointer" }}
             >
@@ -177,7 +179,7 @@ export default function App() {
         </div>
       </section>
 
-      <footer class="end">
+      <footer className="end">
         <h1>
           Made by{" "}
           <a href="https://utsav-kumar.netlify.app/" target="_blank">
